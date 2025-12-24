@@ -13,7 +13,7 @@ public class StringToRemoteModeBrowserTypeConverter implements Converter<Browser
 
 	@Override
 	public BrowserRemoteModeType convert(Method method, String remoteMode) {
-        // Correct syntax: Map.of(key1, value1, key2, value2, ...)
+        
      
         return BrowserRemoteModeType.valueOf(remoteMode.toUpperCase());
     }
