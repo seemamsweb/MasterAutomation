@@ -1,6 +1,8 @@
-package com.unee.config;
+package com.unee.config.factory;
 
 import org.aeonbits.owner.ConfigCache;
+
+import com.unee.config.FrameworkConfig;
 
 public final class ConfigFactory {
 	private ConfigFactory() {}

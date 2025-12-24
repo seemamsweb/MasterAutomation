@@ -1,22 +1,22 @@
-package com.unee.driver.manager;
+package com.unee.config.factory;
 
 import org.openqa.selenium.WebDriver;
 
-import com.unee.config.ConfigFactory;
 import com.unee.enums.BrowserRemoteModeType;
+import com.unee.enums.BrowserType;
 
 public class RemoteDriverFactory {
 
 	private RemoteDriverFactory() {}
 	
-	public static WebDriver getDriver() {
+	public static WebDriver getDriver(BrowserRemoteModeType browserRemoteModeType, BrowserType browserType) {
 		
-		BrowserRemoteModeType browserRemoteModeType = ConfigFactory.getConfig().browserRemoteMode();
+		 
 		if(browserRemoteModeType == BrowserRemoteModeType.SELENIUM) 
 		{}
 		else if(browserRemoteModeType == BrowserRemoteModeType.SELENOID) 
 		{}
-		else {
+		else if(browserRemoteModeType == BrowserRemoteModeType.BrowserStack){
 		}
 		return null;
 		

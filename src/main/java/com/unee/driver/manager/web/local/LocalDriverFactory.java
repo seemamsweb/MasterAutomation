@@ -1,10 +1,9 @@
-package com.unee.driver;
+package com.unee.driver.manager.web.local;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.unee.config.ConfigFactory;
 import com.unee.driver.manager.ChromeManager;
 import com.unee.driver.manager.FirefoxManager;
 import com.unee.enums.BrowserType;
@@ -14,17 +13,14 @@ public class LocalDriverFactory {
 	
 	private LocalDriverFactory() {}
 	
-	public static WebDriver getDriver() {
-		WebDriver driver = null;
-		if(isBrowserChrome()) driver =ChromeManager.getDriver();
-		else driver =FirefoxManager.getDriver();
-		return driver;
+	public static WebDriver getDriver(BrowserType browserType) {
 		
+		return isBrowserChrome(browserType) ? ChromeManager.getDriver() : FirefoxManager.getDriver();
 	}
 
-	private static boolean isBrowserChrome() {
+	private static boolean isBrowserChrome(BrowserType browserType) {
 		// TODO Auto-generated method stub
-		return ConfigFactory.getConfig().browser()==BrowserType.CHROME;
+		return browserType == BrowserType.CHROME;
 	}
 }
 

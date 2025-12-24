@@ -2,13 +2,16 @@ package com.unee.driver;
 
 import org.openqa.selenium.WebDriver;
 
+import com.unee.driver.manager.web.local.LocalDriverFactory;
+import com.unee.enums.BrowserType;
+
 
 public class Driver {
 	 
 
 	public static void initDriver() {
 		//LocalDriverFactory
-		WebDriver driver = LocalDriverFactory.getDriver();
+		WebDriver driver = LocalDriverFactory.getDriver(BrowserType.CHROME);
 		driver.get("https://www.google.com");
 
 }

@@ -1,8 +1,11 @@
 package com.unee.config;
 
+import java.net.URL;
+
 import org.aeonbits.owner.Config;
 
-import com.unee.converters.StringToBrowserTypeConverter;
+import com.unee.config.converters.StringToBrowserTypeConverter;
+import com.unee.config.converters.StringToURLConverter;
 import com.unee.enums.BrowserRemoteModeType;
 import com.unee.enums.BrowserType;
 import com.unee.enums.RunModeBrowserType;
@@ -25,4 +28,10 @@ public interface FrameworkConfig extends Config {
 	
 	@Key("browserRemoteMode")
 	BrowserRemoteModeType browserRemoteMode();
+	
+	@ConverterClass(StringToURLConverter.class)
+	URL seleniumGridURL();
+	
+	@ConverterClass(StringToURLConverter.class)
+	URL seleniodURL();
 }

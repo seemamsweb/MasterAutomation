@@ -4,7 +4,7 @@ package com.unee.tests;
 
 import org.testng.annotations.Test;
 
-import com.unee.config.ConfigFactory;
+import com.unee.config.factory.ConfigFactory;
 
 
 
