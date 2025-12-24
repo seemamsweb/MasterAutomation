@@ -3,7 +3,9 @@ package com.unee.config;
 import org.aeonbits.owner.Config;
 
 import com.unee.converters.StringToBrowserTypeConverter;
+import com.unee.enums.BrowserRemoteModeType;
 import com.unee.enums.BrowserType;
+import com.unee.enums.RunModeBrowserType;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
     // 👇 Change "System:properties" to "system:properties"
@@ -17,4 +19,10 @@ public interface FrameworkConfig extends Config {
 	@DefaultValue("Chrome")
 	@ConverterClass(StringToBrowserTypeConverter.class)
 	BrowserType browser();
+	
+	@Key("runModeBrowser")
+	RunModeBrowserType browserRunMode();
+	
+	@Key("browserRemoteMode")
+	BrowserRemoteModeType browserRemoteMode();
 }

@@ -5,9 +5,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.unee.config.ConfigFactory;
+import com.unee.driver.manager.ChromeManager;
+import com.unee.driver.manager.FirefoxManager;
 import com.unee.enums.BrowserType;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LocalDriverFactory {
 	
@@ -15,25 +16,16 @@ public class LocalDriverFactory {
 	
 	public static WebDriver getDriver() {
 		WebDriver driver = null;
-		
-		if(ConfigFactory.getConfig().browser()==BrowserType.CHROME)
-		{
-		WebDriverManager.chromedriver().setup(); 
-		driver = new ChromeDriver(); 
-		driver.get("https://www.google.com"); 
-				
-		
-	}
-	else
-	{
-		WebDriverManager.firefoxdriver().setup(); 
-		 driver = new FirefoxDriver();
-	}
+		if(isBrowserChrome()) driver =ChromeManager.getDriver();
+		else driver =FirefoxManager.getDriver();
 		return driver;
-	}
-	
-	
 		
 	}
+
+	private static boolean isBrowserChrome() {
+		// TODO Auto-generated method stub
+		return ConfigFactory.getConfig().browser()==BrowserType.CHROME;
+	}
+}
 
 
