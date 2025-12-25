@@ -2,7 +2,7 @@ package com.unee.driver;
 
 import org.openqa.selenium.WebDriver;
 
-import com.unee.driver.manager.web.local.LocalDriverFactory;
+import com.unee.config.factory.LocalDriverFactory;
 import com.unee.enums.BrowserType;
 
 

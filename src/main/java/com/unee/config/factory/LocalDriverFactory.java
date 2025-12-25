@@ -1,11 +1,11 @@
-package com.unee.driver.manager.web.local;
+package com.unee.config.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.unee.driver.manager.ChromeManager;
-import com.unee.driver.manager.FirefoxManager;
+import com.unee.driver.manager.web.local.ChromeManager;
+import com.unee.driver.manager.web.local.FirefoxManager;
 import com.unee.enums.BrowserType;
 
 

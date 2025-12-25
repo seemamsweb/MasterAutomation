@@ -1,4 +1,4 @@
-package com.unee.driver.manager;
+package com.unee.driver.manager.web.local;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
