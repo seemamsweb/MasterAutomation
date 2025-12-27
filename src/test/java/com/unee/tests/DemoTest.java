@@ -2,9 +2,11 @@ package com.unee.tests;
 
 
 
-import org.testng.annotations.Test;
 
-import com.unee.config.factory.ConfigFactory;
+import org.junit.Test;
+
+import com.unee.config.factory.web.local.ConfigFactory;
+import com.unee.config.factory.web.remote.BrowserStackConfigFactory;
 
 
 
@@ -22,6 +24,7 @@ public class DemoTest {
 		 * WebDriverManager.chromedriver().setup(); WebDriver driver = new
 		 * ChromeDriver(); driver.get("https://www.google.com"); driver.quit();
 		 */
+		System.out.println(BrowserStackConfigFactory.getConfig().browserStackURL());
 		
 	}
 

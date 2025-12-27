@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import com.unee.config.factory.ConfigFactory;
+import com.unee.config.factory.web.local.ConfigFactory;
 
 public class SeleniumGridFirefoxManager {
 

@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import com.unee.config.factory.BrowserStackConfigFactory;
+import com.unee.config.factory.web.remote.BrowserStackConfigFactory;
 
 
 

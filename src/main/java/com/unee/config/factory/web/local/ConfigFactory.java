@@ -1,4 +1,4 @@
-package com.unee.config.factory;
+package com.unee.config.factory.web.local;
 
 import org.aeonbits.owner.ConfigCache;
 
